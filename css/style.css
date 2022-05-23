@@ -1,0 +1,77 @@
+#gang {width: 225px; height: 400px;
+  background-image: url(https://estelle.github.io/10/files/sprite.png);
+  animation: gangham 4s steps(23,start) infinite,
+    movearound 12s steps(69,end) infinite alternate 44ms;
+  animation-direction: normal, alternate;
+}
+@keyframes gangham {
+  0% {background-position: 0 0}
+  100% {background-position: -5175px 0}
+}
+@keyframes movearound {
+  0% {transform: translatex(0)}
+  100% {transform: translatex(600px);}
+}
+
+section {
+  background-color: #e9d5ff;
+}
+
+article {
+  animation-duration: 2s;
+  animation-name: slidein;
+  padding-left: auto;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 200%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+article img {
+	width: 100%;
+  border-radius: 100px 100px 100px 100px;
+}
+
+a:hover{ background-color: #ccfbf1;
+
+}
+img{position:relative;
+	top:0px
+	left:rgb(255, 0, 0);
+
+  border-style: dashed;
+}
+
+#llistat-films{display:flex;
+  flex-wrap: wrap;
+
+}
+
+.llistatrefilms {
+  width: 20%;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  padding: 10px 10px 50px 10px;
+  background-color:#808080;
+}
+
+h2{
+  animation: 3s infinite alternate slidein;
+  background-color: #ffedd5;
+}
+p{
+  text-align: center;
+  font-size: 20px;
+  color:red;
+  }
+titol{
+  font-size: 20px;
+}
