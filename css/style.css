@@ -1,10 +1,19 @@
 body { margin: 0; }
 
-.splide img{
-  width: 100%;
 }
+
+/*SPLIDE*/
+.splide__track{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.splide img{
+  width:100%;
+}
+
 .haviam {
-  position:absolute;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +21,10 @@ body { margin: 0; }
   width: 100%;height: 100%;
   font-size: 35pt;
   margin: 0;
+  z-index: 1;
 }
+/*FI SPLIDE*/
+
 .color
 {
    text-transform: uppercase;
@@ -63,7 +75,7 @@ section {
 }
 
 article {
-  animation-duration: 2s;
+  animation-duration: 8s;
   animation-name: slidein;
   padding-left: auto;
 }
@@ -85,9 +97,7 @@ article img {
   border-radius: 100px 100px 100px 100px;
 }
 
-a:hover{ background-color: #ccfbf1;
 
-}
 img{position:relative;
 	top:0px
 	left:rgb(255, 0, 0);
@@ -95,28 +105,49 @@ img{position:relative;
   border-style: dashed;
 }
 
-#llistat-films{display:flex;
-  flex-wrap: wrap;
+#llistat-films{
   margin: 20px 20px 20px 20px;
   padding: 10px 10px 50px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 
 .llistatrefilms {
-  display: flex;
-  flex-wrap: wrap;
   width: 30%;
   text-align: center;
   margin: 20px 20px 20px 20px;
-  padding: 10px 10px 50px 10px;
+  padding: 10px 10px 10px 10px;
 
   background-color:#808080;
 }
 
-h2{width: 30px;
+h2{width: 200px;
   color: tomato;
-  animation: 3s infinite alternate slidein;
+  animation: 8s infinite alternate slidein;
   background-color: #ffedd5;
+}
+h3{font-size: 50px;
+  text-transform: uppercase;
+ background-image: linear-gradient(
+   -225deg,
+   #231557 0%,
+   #44107a 29%,
+   #ff1361 67%,
+   #fff800 100%
+ );
+ background-size: auto auto;
+ background-clip: border-box;
+ background-size: 200% auto;
+ color: #fff;
+ background-clip: text;
+ text-fill-color: transparent;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ animation: textclip 2s linear infinite;
+ display: inline-block;
+
 }
 p{
   text-align: center;
@@ -126,8 +157,105 @@ p{
 titol{
   font-size: 20px;
 }
-cideres {
+
+.etoiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 20px 20px 20px;
+  padding: 10px 10px 10px 10px;
+  align-items: center;
+}
+.etoiles img {width: 50px; height: 50px;}
+
+/*CUQUI*/
+
+video {
+  width: 100%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #000;
+}
+.center{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.center h1{
+  color: rgba(255,0,0,0.1);
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-size: cover;
+  background-image: url(https://cdn-images-1.medium.com/max/2000/1*Jalb56N34pBIGCjQULtW3A.jpeg);
+  -webkit-background-clip: text;
+  animation: background-text-animation 15s linear infinite;
+}
+@keyframes background-text-animation {
+  0%{
+    background-position: left 0px top 50%;
+  }
+  50%{
+    background-position: left 1500px top 50%;
+  }
+  100%{
+    background-position: left 0px top 50%;
+  }
+}
+body{background-color: #e4e4e7;
+
+  					}
+label{
+  display: inline-block;
+  width: 200px;
+  padding: 5px 15px;
 
 }
-.etoiles {display: flex;}
-.etoiles img {width: 50px; height: 50px;}
+
+span {
+  color: red;
+}
+input:hover {background-color: #2dd4bf;}
+
+input[type="submit"] {
+  background: green;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid green;
+  padding: 5px 15px ;
+  margin-right: 12px;
+}
+
+input[type="submit"]:hover {
+  background: white;
+  color: green;
+  border: 1px solid green;
+}
+input[type="reset"] {
+  background:red;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid green;
+  padding: 5px 15px;
+  margin-right: 12px;
+}
+
+input[type="reset"]:hover {
+  background: white;
+  color: green;
+  border: 1px solid green;
+}
+
+
+input:focus {
+  background:#fed047;
+}

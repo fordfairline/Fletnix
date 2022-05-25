@@ -1,12 +1,3 @@
-document.addEventListener( 'DOMContentLoaded', function() {
-   var splide = new Splide( '.splide',{
-     type : "loop",
-     autoplay : true,
-     interval : 4000,
-   } );
-   splide.mount();
- } );
-
 $.getJSON("PHP/pellicules_list.php",function(films){//php llegeix com un jason
   console.log(films);
 
@@ -16,16 +7,16 @@ $.getJSON("PHP/pellicules_list.php",function(films){//php llegeix com un jason
     var director=films[f]["director"];
    var cideres=""
         if(films[f]["puntuacio"]==0){cideres="<div class='etoiles'><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png></div>"}
-    else if(films[f]["puntuacio"]==1){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png></div>"}
-    else if(films[f]["puntuacio"]==2){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png></div>"}
-    else if(films[f]["puntuacio"]==3){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png></div>"}
-    else if(films[f]["puntuacio"]==4){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_half.png><img src=img/stars/star_on.png><img src=img/stars/star_off.png></div>"}
-    else if(films[f]["puntuacio"]==5){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png></div>"}
-    else if(films[f]["puntuacio"]==6){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
-    else if(films[f]["puntuacio"]==7){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
-    else if(films[f]["puntuacio"]==8){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
-    else if(films[f]["puntuacio"]==9){cideres="<div class='etoiles'><img src=img/stars/star_half.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
-    else if(films[f]["puntuacio"]==10){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_off.png></div>"}
+    else if(films[f]["puntuacio"]==1){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_on.png></div>"}
+    else if(films[f]["puntuacio"]==2){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_half.png><img src=img/stars/star_off.png><img src=img/stars/star_off.png><img src=img/stars/star_on.png></div>"}
+    else if(films[f]["puntuacio"]==3){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_half.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
+    else if(films[f]["puntuacio"]==4){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_off.png><img src=img/stars/star_half.png><img src=img/stars/star_on.png><img src=img/stars/star_off.png></div>"}
+    else if(films[f]["puntuacio"]==5){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_off.png><img src=img/stars/star_on.png><img src=img/stars/star_off.png></div>"}
+    else if(films[f]["puntuacio"]==6){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_off.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
+    else if(films[f]["puntuacio"]==7){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
+    else if(films[f]["puntuacio"]==8){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
+    else if(films[f]["puntuacio"]==9){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
+    else if(films[f]["puntuacio"]==10){cideres="<div class='etoiles'><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png><img src=img/stars/star_on.png></div>"}
 
 
 
@@ -36,10 +27,11 @@ $.getJSON("PHP/pellicules_list.php",function(films){//php llegeix com un jason
 
       "<h3>"+films[f]["titol"]+"</h3>"+//apuntem totes les dades que necessitem.
 
-     "<img src=img/covers/"+films[f]["image"]+".jpg />"+
+     "<a href='video.html'><img src=img/covers/"+films[f]["image"]+".jpg /></a>"+
 
-    /*  "<p>"+"https://www.google.com/search?q="+" <br> "+"<h4>"+*/ films[f]["any"]+"</h4>"+
-       "<br>"+"<h4>"+films[f]["director"]+"</h4>"+ "<h4>"+films[f]["pais"]+"</h4>"+"</p>"+
+
+      "<h4>"+films[f]["any"]+"</h4>"+
+       "<br>"+"<h4>"+films[f]["director"]+"</h4>"+ "<h4>"+films[f]["pais"]+"</h4>"+
        cideres+
       "<a target=_blank href='https://www.google.cat/search?q="+titol+" "+director+"'>+info</a>";+
 

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<!-- Informació Meta -->
+	<meta charset="utf-8"/>
+	<meta name="description" content="Lorem Ipsum">
+	<meta name="keywords" content="Lorem, Ipsum">
+	<meta name="author" content="Lorem Ipsum">
+
+	<!-- Enllaç a l'arxiu CSS Extern -->
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+
+	<!-- Enllaç a Javascript Extern -->
+	<script  type="text/javascript" src="js/javascript.js"></script>
+
+  <form action="sas" method="post"  enctype="multipart/form-data">
+
+	<!-- favicon -->
+	<link href="img/favicon.png" rel="icon" type="image/png" />
+
+	<!-- Títol de la pàgina -->
+	<title>PEPFLIX</title>
+</head>
+<body>
+
+
+			<h2>Crea la teva pellicula</h2>
+			<p>Els camps indicats amb un asterisc son obligatoris</p>
+
+			<form action="action.php" method="POST">
+
+			<label>titol <span>*</span></label>
+						<input type="text" id="titol" name="titol" placeholder="titol" onblur="valida_titol();">
+						<span class="error" id="error_titol"></span>
+						<br>
+			<label>director<span>*</span></label>
+			 			<input type="text" id="director" name="director" placeholder="director" onblur="valida_director();">
+						<span class="error" id="error_director"></span>
+						<br>
+			 <label>any<span>*</span></label>
+						<input type="numberS" id="any" name="any" placeholder="introdueixi any" onblur="valida_any();">
+						<span class="error" id="error_any"></span>
+						<br>
+      <label>director<span>*</span></label>
+      			 <input type="text" id="pais" name="pais" placeholder="introdueixi pais" onblur="valida_pais();">
+      			<span class="error" id="error_pais"></span>
+      			<br>
+      <label>director<span>*</span></label>
+            <input type="text" id="animacio" name="animacio" placeholder="animacio">
+            <br>
+      <label>director<span>*</span></label>
+            <input type="text" id="catala" name="catala" placeholder="catala">
+            <br>
+      <label>any<span>*</span></label>
+            <input type="numberS" id="puntuacio" name="puntuacio" placeholder="introdueixi puntuacio" onblur="valida_puntuacio();">
+            <span class="error" id="error_puntuacio"></span>
+           <br>
+     <label>observacions</label><br>
+     			<textarea id="info" name="info" placeholder="Expliqui aqui els seus problemes personals" rows="20" cols="50"></textarea><br>
+
+          <input type="submit" id="Tramitar" name="Tramitar" value="Enviar">
+          <input type="reset" id="Esborrar" name="Esborrar" value="Cancel-lar">
+
+
+        </form>
+    
+    </body>
+    </html>
