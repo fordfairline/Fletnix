@@ -1,7 +1,7 @@
 <?php
   //dades de connexió
-  $servidor = "filmoteca";
-  $usuari = "fordfairline";
+  $servidor = "localhost";
+  $usuari = "filmoteca";
   $contrasenya = "12345";
   $basededades = "filmoteca";
   $taula = "pellicules";
@@ -50,7 +50,7 @@
   $tamany_max = 5242880;
   $ruta_temporal = $_FILES['imatge']['tmp_name'];
   //comprovo características
-  if (!(strpos($tipus_arxiu, "jpeg")) && ($tamany_arxiu < $tamany_max)) {
+  if (!(strpos($tipus_arxiu, "jpeg")) || ($tamany_arxiu < $tamany_max)) {
      	echo "Extensió o tamany de la imatge incorrecte.";
   }else{
      	if (move_uploaded_file($ruta_temporal, $ruta_desti)){

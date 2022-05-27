@@ -10,10 +10,12 @@
 	<!-- Enllaç a l'arxiu CSS Extern -->
 	<link rel="stylesheet" href="css/style.css" type="text/css"/>
 
-	<!-- Enllaç a Javascript Extern -->
-	<script  type="text/javascript" src="js/javascript.js"></script>
+	<!-- Enllaç a jquery -->
+	<script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <form action="sas" method="post"  enctype="multipart/form-data">
+	<!-- Enllaç a Javascript Extern -->
+	<script  type="text/javascript" src="js/mulari.js"></script>
+	<script  type="text/javascript" src="js/cuqui.js"></script>
 
 	<!-- favicon -->
 	<link href="img/favicon.png" rel="icon" type="image/png" />
@@ -25,9 +27,24 @@
 
 
 			<h2>Crea la teva pellicula</h2>
-			<p>Els camps indicats amb un asterisc son obligatoris</p>
+			<p>Els camps indicats amb un asterisc son obligatoris<span>*</span></p>
 
-			<form action="action.php" method="POST">
+		<form action="PHP/pellicules_add.php" method="POST" enctype="multipart/form-data">
+
+			<div id="meravelluç">
+				<div class="pepito">
+	<!--<div class="take-input">
+		 <input type="text" placeholder="Write any text" />
+		<a href="javascript:void(0);">Enter Text</a>
+	</div>-->
+	<div class="animate seven">
+			<span>p</span><span>e</span><span>l</span><span>i</span><span>s</span> &nbsp;
+			<span>i</span><span>m</span><span>p</span><span>r</span><span>e</span><span>s</span><span>i</span><span>o</span><span>n</span><span>a</span><span>n</span><span>t</span><span>s</span>
+
+			<a class="repeat" href="javascript:void(0);">Clica i Gaudeix</a>
+		</div>
+		</div>
+
 
 			<label>titol <span>*</span></label>
 						<input type="text" id="titol" name="titol" placeholder="titol" onblur="valida_titol();">
@@ -38,21 +55,23 @@
 						<span class="error" id="error_director"></span>
 						<br>
 			 <label>any<span>*</span></label>
-						<input type="numberS" id="any" name="any" placeholder="introdueixi any" onblur="valida_any();">
+						<input type="number" id="any" name="any" placeholder="introdueixi any" onblur="valida_any();">
 						<span class="error" id="error_any"></span>
 						<br>
-      <label>director<span>*</span></label>
+      <label>pais<span>*</span></label>
       			 <input type="text" id="pais" name="pais" placeholder="introdueixi pais" onblur="valida_pais();">
       			<span class="error" id="error_pais"></span>
       			<br>
-      <label>director<span>*</span></label>
-            <input type="text" id="animacio" name="animacio" placeholder="animacio">
-            <br>
-      <label>director<span>*</span></label>
-            <input type="text" id="catala" name="catala" placeholder="catala">
-            <br>
-      <label>any<span>*</span></label>
-            <input type="numberS" id="puntuacio" name="puntuacio" placeholder="introdueixi puntuacio" onblur="valida_puntuacio();">
+			<label>catala</label>
+						 	<input type="radio" id="catala" name="catala" value="si" onblur="catala()">si
+							<input type="radio" id="catala" name="catala" value="no" onblur="catala()">no
+							<br>
+			<label>animacio</label>
+							<input type="radio" id="animacio" name="animacio" value="si" onblur="animacio()">si
+							<input type="radio" id="animacio" name="animacio" value="no" onblur="animacio()">no
+							<br>
+      <label>puntuacio<span>*</span></label>
+            <input type="number" id="puntuacio" name="puntuacio" placeholder="introdueixi puntuacio" onblur="valida_puntuacio();">
             <span class="error" id="error_puntuacio"></span>
            <br>
      <label>observacions</label><br>
@@ -60,9 +79,9 @@
 
           <input type="submit" id="Tramitar" name="Tramitar" value="Enviar">
           <input type="reset" id="Esborrar" name="Esborrar" value="Cancel-lar">
-
+				</div>
 
         </form>
-    
+
     </body>
     </html>
